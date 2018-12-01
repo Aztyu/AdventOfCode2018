@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'fr.corentinbeal'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+task(runMain, dependsOn: 'classes', type: JavaExec) {
+    main = 'Main'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
