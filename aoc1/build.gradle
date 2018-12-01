@@ -18,4 +18,5 @@ task(runMain, dependsOn: 'classes', type: JavaExec) {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
 }
